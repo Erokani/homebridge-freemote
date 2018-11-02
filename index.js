@@ -16,7 +16,7 @@ module.exports = function(homebridge) {
 	Characteristic = homebridge.hap.Characteristic;
 	
 	homebridge.registerAccessory("homebridge-freemote", "Freemote", FreemoteAccessory);
-	homebridge.registerAccessory("homebridge-freemote", "Freemote", FreemoteAccessoryVolume);
+	homebridge.registerAccessory("homebridge-freemote", "FreemoteVolume", FreemoteAccessoryVolume);
 };
 
 //
