@@ -168,6 +168,7 @@ FreemoteAccessoryVolume.prototype._getChannel = function(callback) {
 
 function changeChannel(callback) {
 	this.Api.volume(this.channel >= '50' ? 'up' : 'down');
+	this.channel = 50;
 	callback(null, this.channel);
 }
 
