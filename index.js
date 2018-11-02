@@ -163,11 +163,11 @@ FreemoteAccessoryVolume.prototype._setOn = function(on, callback) {
 };
 
 FreemoteAccessoryVolume.prototype._getChannel = function(callback) {
-	callback(null, this.channel);
+	callback(null, 50);
 };
 
 function changeChannel(callback) {
-	this.Api.volume(this.channel !== '0' ? 'up' : 'down');
+	this.Api.volume(this.channel >= '50' ? 'up' : 'down');
 	callback(null, this.channel);
 }
 
