@@ -59,7 +59,7 @@ FreemoteAccessory.prototype.getInformationService = function() {
 	informationService
 		.setCharacteristic(Characteristic.Name, this.name)
 		.setCharacteristic(Characteristic.Manufacturer, 'Freebox Remote')
-		.setCharacteristic(Characteristic.Model, '1.0.0')
+		.setCharacteristic(Characteristic.Model, '1.1.0')
 		.setCharacteristic(Characteristic.SerialNumber, this.remote_code);
 	return informationService;
 };
@@ -125,7 +125,7 @@ function FreemoteAccessoryVolume(log, config) {
 
 	this.Api = new FreemoteApi(this.log, this.freebox_ip, this.appid, this.token, this.remote_code);
 
-	this.channel = 1;
+	this.channel = 50;
 
 	this.service = new Service.Lightbulb(this.name);
 
@@ -145,7 +145,7 @@ FreemoteAccessoryVolume.prototype.getInformationService = function() {
 	informationService
 		.setCharacteristic(Characteristic.Name, this.name)
 		.setCharacteristic(Characteristic.Manufacturer, 'Freebox Remote')
-		.setCharacteristic(Characteristic.Model, '1.0.0')
+		.setCharacteristic(Characteristic.Model, '1.1.0')
 		.setCharacteristic(Characteristic.SerialNumber, this.remote_code);
 	return informationService;
 };
