@@ -166,7 +166,7 @@ FreemoteAccessoryVolume.prototype._getChannel = function(callback) {
 	callback(null, 50);
 };
 
-function changeChannel(callback) {
+function changeVolume(callback) {
 	this.Api.volume(this.channel >= '50' ? 'up' : 'down');
 	this.channel = 50;
 	callback(null, this.channel);
@@ -175,5 +175,5 @@ function changeChannel(callback) {
 FreemoteAccessoryVolume.prototype._setChannel = function(channel, callback) {
 	this.log('Changing volume to %s.', JSON.stringify(channel));
 	this.channel = '' + channel;
-	this._chTmo = setTimeout(changeChannel.bind(this, callback), 2000);
+	this._chTmo = setTimeout(changeVolume.bind(this, callback), 2000);
 };
